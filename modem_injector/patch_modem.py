@@ -1,7 +1,6 @@
 #!/usr/bin/env python2
 # TODO: use python3
 # coding: utf8
-from polytools import hexdump,ok,info,warn,error
 from struct import unpack, pack
 import zlib
 import sys
@@ -57,7 +56,6 @@ class TOC_entry:
 		if ccrc == self.crc:
 			return True
 		else:
-			error("Bad crc")
 			return False
 
 	def pack_toc_entry(self):
